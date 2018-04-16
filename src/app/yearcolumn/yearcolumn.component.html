@@ -1,0 +1,22 @@
+<div class='year' [ngClass]="{'selectedYear': data.selected}">
+  <div class='title' [ngClass]="{'selected': data.selected, 'not-selected': !data.selected}">
+    <div>
+      {{data.yearTitle}}
+    </div>
+    <div class='credit'>{{data.creditInfo}}</div>
+  </div>
+    <div *ngFor="let courseDetail of data.courses">
+      <app-course-slot [course]="courseDetail" [selected]="data.selected"></app-course-slot>
+    </div>
+    <div *ngFor="let aCourseDetail of data.available">
+      <app-add-slot [course]="aCourseDetail" [selected]="data.selected"></app-add-slot>
+    </div>
+    <div *ngFor='let slot of emptyArray'>
+      <app-empty-slot [selected]="data.selected"></app-empty-slot>
+    </div>
+    <div *ngIf="data.selected" class="submitBtn">
+      <div class="d-flex align-items-center align-self-center">
+        <div class="d-inline-flex p-2">Ready To Submit</div>
+      </div>
+    </div>
+</div>

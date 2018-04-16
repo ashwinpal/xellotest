@@ -1,0 +1,120 @@
+@import '~sass/variables';
+@import '~sass/mixins';
+
+.container {
+  font-family: $font-stack;
+  margin-top: 35px;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1292px;
+  }
+}
+
+#page-title {
+  @include set-font-and-color(1.4rem, 500, $title-color);
+}
+
+.rounded-circle {
+  background-color: $credit-circle-color;
+  padding: 2px 5px;
+  @include set-font-and-color(0.8rem, 200, $white);
+  position: relative;
+    top: -4px;
+    margin-left: 14px;
+}
+
+.credit-text {
+  @include set-font-and-color(0.8rem, 300, $credit-text-color);
+  letter-spacing: 0.4px;
+  position: relative;
+    top: -4px;
+}
+
+.requirements {
+  margin-left: 0px;
+  margin-right: 14px;
+  padding-left: 10px;
+  border-radius:5px;
+  margin-top: 10px;
+  height: 47px;
+  background-color: $grey;
+  border: 1px solid $border-color;
+  
+  @include set-font-and-color(0.8rem, 300, $credit-text-color);
+
+  & > div:first-of-type {
+    border-right: 1px solid $border-color;
+    max-width: 453px;
+  }
+}
+
+.year {
+  margin-top: 20px;
+
+  div:nth-of-type(1) {
+    padding-left: 0;
+  }
+  div:last-child {
+    padding-right: 0;
+  }
+
+}
+
+div {
+  .progress {
+    width: 200px;
+    height: 15px;
+    background-color: $white;
+    border-radius: 3px;
+    border: 1px solid $border-color;
+    margin-left: 12%;
+    margin-top: -1px;
+    .progress-bar {
+      background-color: $progress-color;
+    }
+  }
+  .progress-text {
+    @include set-font-and-color(0.8rem, 300, $credit-text-color);
+    margin-left: -2.5%;
+    position: relative;
+    top: -2px;
+    span {
+      color: $progress-text-color;
+      font-weight: 500;
+    }
+  }
+}
+.dropdown-btn{
+  background-color: $white;
+  border-radius: 5px;
+  max-width: 300px;
+  height: 36px;
+  border: 1px solid $border-color;
+  margin-left: 13px;
+
+  span {
+    margin-left: -20px;
+  }
+}
+
+.down-arrow {
+  font-size: 1.5rem;
+  margin-top: -8px;
+  text-align-last: right;
+  padding-left: 80px;
+}
+
+input[type='checkbox'] {
+    -ms-transform: scale(1.5); /* IE */
+    -moz-transform: scale(1.5); /* FF */
+    -webkit-transform: scale(1.5); /* Safari and Chrome */
+    -o-transform: scale(1.5); /* Opera */
+    transform: scale(1.5);
+    margin-right: 10px;
+}
+
+.credits {
+  margin-left: 20px;
+}

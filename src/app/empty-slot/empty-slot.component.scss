@@ -1,0 +1,19 @@
+@import '~sass/variables';
+@import '~sass/mixins';
+div {
+    @extend %card-shared;
+    border: 1.5px dashed $border-color;
+    @extend %flex-center-items;
+    padding: 20px;
+    color: $light-text-color;
+    @include set-font(0.8rem, 200);
+}
+
+.selected {
+    @extend %selected-card;
+    margin-top: 5px;
+}
+
+.not-selected {
+    margin-top: 5px;
+}

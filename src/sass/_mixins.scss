@@ -1,0 +1,17 @@
+@mixin card-status($width, $bg-color) {
+  max-width: $width;
+  background-color: $bg-color;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: 1px solid $bg-color;
+}
+
+@mixin set-font($fsize, $fweight) {
+  font-size: $fsize;
+  font-weight: $fweight;
+}
+
+@mixin set-font-and-color($fsize, $fweight, $fcolor) {
+  @include set-font($fsize, $fweight);
+  color: $fcolor;
+}

@@ -1,0 +1,26 @@
+@import '~sass/variables';
+@import '~sass/mixins';
+
+.details {
+  @extend %card-shared;
+  @include set-font(0.8rem, 200);
+  .plus {
+    @include card-status(39px, $blue);
+    color: $white;
+    @extend %flex-center-items;
+    padding-left: 12px;
+  }
+  .content {
+    @extend %card-detail;
+    color: $blue-dark;
+    @extend %content-start;
+    & > div:last-of-type {
+      @include set-font-and-color(0.7rem, 200, $credit-text-color);
+    }
+  }
+}
+
+.selected {
+  @extend %selected-card;
+  margin-top: 5px;
+}

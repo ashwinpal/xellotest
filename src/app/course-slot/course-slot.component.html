@@ -1,0 +1,25 @@
+<div class="row no-gutters details" [ngClass]="{'selected':selected}">
+  <div class='col active'></div>
+  <div class='col content'>
+    <div>
+      <span>{{course.name}}</span>
+      <span *ngIf="course.preRequisite" class='rounded-circle'>
+        <fa name="exclamation"></fa>
+      </span>
+      <div class="row no-gutters">
+        <div class='col warning'></div>
+        <div *ngIf="course.preRequisite" class='col warning-content'>
+          <div>This course requires a Pre-Requisite </div>
+          <div>
+            <p>Add One.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <span>{{course.id}} </span>
+      <span>{{course.description}}</span>
+      <span>{{course.credit}}</span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,59 @@
+//font
+@import url('https://fonts.googleapis.com/css?family=Prompt:100,200,300,400,500,700');
+$default: 100%;
+$font-stack: 'Prompt',
+sans-serif;
+$font-reg: 400;
+
+//colors
+$primary-color: #FAFAFA;
+$credit-circle-color: #C3465B;
+$warning-circle-color: #ED556F;
+$warning-bg-color: #772937;
+$white: #FFFFFF;
+$border-color: #E1E1E1;
+$progress-color: #90C043;
+$progress-text-color: #538028;
+$title-color: #484848;
+$credit-text-color: #737373;
+$light-text-color: #AEAEAE;
+$blue: #51ADDA;
+$blue-dark: #317AAA;
+$grey: #F1F1F1;
+
+//extend
+%card-shared {
+  width: 300px;
+  height: 48px;
+  background-color: $white;
+  border-radius: 5px;
+  margin: 2.5px 0;
+}
+
+%selected-card {
+  width: 280px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+%card-detail {
+  border: 1px solid $border-color;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-left: 0;
+}
+
+%flex-center-items {
+  display: flex;
+  align-items: center;
+}
+
+%content-start {
+  padding-left: 10px;
+  padding-top: 7px;
+}
+
+%card-content-right-align{
+    float: right;
+    margin-right: 9px;
+}
